@@ -1,8 +1,9 @@
 import React from "react";
 import "./App.css";
+import OverlayProps from "./types";
 import { Container, Overlay, Content } from "./styles";
 
-function App() {
+const App: React.FC<OverlayProps> = () => {
   return (
     <Container>
       <Overlay />
