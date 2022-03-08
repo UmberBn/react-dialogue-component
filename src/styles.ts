@@ -46,6 +46,7 @@ export const Title = styled.p`
 export const CloseButton = styled.button`
   background-color: transparent;
   border: none;
+  padding: 9px 25px 0px 25px;
 `;
 
 export const CloseButtonSvg = styled.img``;

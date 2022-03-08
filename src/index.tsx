@@ -10,6 +10,7 @@ ReactDOM.render(
       closeOnOverlayClick={false}
       isOpen={true}
       onClose={() => {}}
+      title={"Title"}
     />
   </React.StrictMode>,
   document.getElementById("root")
