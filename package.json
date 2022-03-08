@@ -42,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.24",
     "git-commit-msg-linter": "^4.1.1"
   }
 }
