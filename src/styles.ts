@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
+type OverlayProps = {
+  isHovered: boolean;
+};
+
 const OverlayHeigth = 82;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
@@ -13,12 +17,13 @@ export const Container = styled.div`
   flex-wrap: nowrap;
 `;
 
-export const Overlay = styled.div`
+export const Overlay = styled.div<OverlayProps>`
   height: 100%;
   width: 100%;
   background-color: #000000;
   min-width: ${OverlayHeigth}px;
   opacity: 0.8;
+  cursor: ${({ isHovered }) => (isHovered ? "pointer" : "auto")};
 `;
 
 export const Content = styled.div`
@@ -35,6 +40,7 @@ export const Header = styled.header`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 24px;
 `;
 
 export const Title = styled.p`

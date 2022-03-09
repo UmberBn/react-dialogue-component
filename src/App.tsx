@@ -20,7 +20,7 @@ const App: React.FC<OverlayProps> = ({
 }) => {
   return (
     <Container>
-      <Overlay />
+      <Overlay isHovered={closeOnOverlayClick} />
       <Content>
         <Header>
           {title && <Title>{title}</Title>}
