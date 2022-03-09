@@ -7,21 +7,22 @@ type OverlayProps = {
 const OverlayHeigth = 82;
 
 export const Container = styled.div`
+  box-sizing: border-box;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  position: fixed;
-  top: 0;
-  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
   left: 0;
-  right: 0;
-  flex-wrap: nowrap;
+  top: 0;
 `;
 
 export const Overlay = styled.div<OverlayProps>`
   height: 100%;
   width: 100%;
   background-color: #000000;
-  min-width: ${OverlayHeigth}px;
+  min-height: ${OverlayHeigth}px;
   opacity: 0.8;
   cursor: ${({ isHovered }) => (isHovered ? "pointer" : "auto")};
 `;
@@ -29,7 +30,9 @@ export const Overlay = styled.div<OverlayProps>`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1 0 auto;
   padding: 32px;
+  height: fit-content;
   max-height: calc(100vh - ${OverlayHeigth}px);
   min-height: 64px;
   background-color: #ffffff;
@@ -57,3 +60,14 @@ export const CloseButton = styled.button`
 `;
 
 export const CloseButtonSvg = styled.img``;
+
+export const Description = styled.div`
+  padding-bottom: 32px;
+  overflow: auto;
+`;
+
+export const DescriptionText = styled.p`
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0;
+`;

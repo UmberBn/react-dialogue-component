@@ -9,6 +9,8 @@ import {
   Title,
   CloseButton,
   CloseButtonSvg,
+  Description,
+  DescriptionText,
 } from "./styles";
 import { Close } from "./assets";
 
@@ -17,6 +19,7 @@ const App: React.FC<OverlayProps> = ({
   closeOnOverlayClick,
   isOpen,
   onClose,
+  children,
 }) => {
   if (isOpen) {
     return (
@@ -33,6 +36,11 @@ const App: React.FC<OverlayProps> = ({
               <CloseButtonSvg src={Close} alt="Close dialog button" />
             </CloseButton>
           </Header>
+          {children && (
+            <Description>
+              <DescriptionText>{children}</DescriptionText>
+            </Description>
+          )}
         </Content>
       </Container>
     );
