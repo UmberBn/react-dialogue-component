@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import "./App.css";
 import OverlayProps from "./types";
 import {
@@ -21,6 +21,21 @@ const App: React.FC<OverlayProps> = ({
   onClose,
   children,
 }) => {
+  const closeModalOnEscButton = useCallback(
+    (event: KeyboardEvent) => {
+      event.key === "Escape" && onClose();
+    },
+    [onClose]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", closeModalOnEscButton);
+
+    return () => {
+      document.removeEventListener("keydown", closeModalOnEscButton);
+    };
+  }, [closeModalOnEscButton]);
+
   if (isOpen) {
     return (
       <Container>
