@@ -54,6 +54,7 @@ export const Title = styled.p`
 `;
 
 export const CloseButton = styled.button`
+  cursor: pointer;
   background-color: transparent;
   border: none;
   padding: 9px 25px 0px 25px;

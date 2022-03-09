@@ -9,7 +9,7 @@ ReactDOM.render(
     <App
       closeOnOverlayClick={false}
       isOpen={true}
-      onClose={() => {}}
+      onClose={() => console.log("sair")}
       title={"Title"}
     >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

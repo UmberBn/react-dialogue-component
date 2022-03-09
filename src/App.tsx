@@ -24,15 +24,14 @@ const App: React.FC<OverlayProps> = ({
   if (isOpen) {
     return (
       <Container>
-        <Overlay isHovered={closeOnOverlayClick} />
+        <Overlay
+          isHovered={closeOnOverlayClick}
+          onClick={closeOnOverlayClick ? onClose : undefined}
+        />
         <Content>
           <Header>
             {title && <Title>{title}</Title>}
-            <CloseButton
-              onClick={() =>
-                console.log("Sair", closeOnOverlayClick, isOpen, onClose)
-              }
-            >
+            <CloseButton onClick={onClose}>
               <CloseButtonSvg src={Close} alt="Close dialog button" />
             </CloseButton>
           </Header>
