@@ -18,6 +18,7 @@ export const Overlay = styled.div`
   width: 100%;
   background-color: #000000;
   min-width: ${OverlayHeigth}px;
+  opacity: 0.8;
 `;
 
 export const Content = styled.div`
