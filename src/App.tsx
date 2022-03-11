@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect } from "react";
-import "./App.css";
 import OverlayProps from "./types";
 import {
   Container,
@@ -38,21 +37,31 @@ const App: React.FC<OverlayProps> = ({
 
   if (isOpen) {
     return (
-      <Container>
+      <Container data-testid="react-dialogue-component-test-id">
         <Overlay
+          data-testid="react-dialogue-component-overlay-test-id"
           isHovered={closeOnOverlayClick}
           onClick={closeOnOverlayClick ? onClose : undefined}
         />
-        <Content>
+        <Content data-testid="react-dialogue-component-content-test-id">
           <Header>
-            {title && <Title>{title}</Title>}
-            <CloseButton onClick={onClose}>
+            {title && (
+              <Title data-testid="react-dialogue-component-title-test-id">
+                {title}
+              </Title>
+            )}
+            <CloseButton
+              onClick={onClose}
+              data-testid="react-dialogue-component-close-button-test-id"
+            >
               <CloseButtonSvg src={Close} alt="Close dialog button" />
             </CloseButton>
           </Header>
           {children && (
             <Description>
-              <DescriptionText>{children}</DescriptionText>
+              <DescriptionText data-testid="react-dialogue-component-description-test-id">
+                {children}
+              </DescriptionText>
             </Description>
           )}
         </Content>
