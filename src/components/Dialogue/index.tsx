@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import { useEffect, FC } from "react";
 import OverlayProps from "./types";
 import {
   Container,
@@ -11,29 +11,25 @@ import {
   Description,
   DescriptionText,
 } from "./styles";
-import { Close } from "./assets";
+import { Close } from "../../assets";
 
-const App: React.FC<OverlayProps> = ({
+const Dialogue: FC<OverlayProps> = ({
   title,
   closeOnOverlayClick,
   isOpen,
   onClose,
   children,
 }) => {
-  const closeModalOnEscButton = useCallback(
-    (event: KeyboardEvent) => {
-      event.key === "Escape" && onClose();
-    },
-    [onClose]
-  );
-
   useEffect(() => {
+    const closeModalOnEscButton = (event: KeyboardEvent) => {
+      event.key === "Escape" && onClose();
+    };
     document.addEventListener("keydown", closeModalOnEscButton);
 
     return () => {
       document.removeEventListener("keydown", closeModalOnEscButton);
     };
-  }, [closeModalOnEscButton]);
+  }, [onClose]);
 
   if (isOpen) {
     return (
@@ -71,4 +67,4 @@ const App: React.FC<OverlayProps> = ({
   return null;
 };
 
-export default App;
+export default Dialogue;
