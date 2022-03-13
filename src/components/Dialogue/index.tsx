@@ -41,10 +41,12 @@ const Dialogue: FC<OverlayProps> = ({
         />
         <Content data-testid="react-dialogue-component-content-test-id">
           <Header>
-            {title && (
+            {title ? (
               <Title data-testid="react-dialogue-component-title-test-id">
                 {title}
               </Title>
+            ) : (
+              <span></span>
             )}
             <CloseButton
               onClick={onClose}
