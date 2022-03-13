@@ -7,7 +7,14 @@ type OverlayProps = {
 const OverlayHeigth = 82;
 
 export const Container = styled.div`
-  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap");
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
   position: fixed;
   display: flex;
   flex-direction: column;
