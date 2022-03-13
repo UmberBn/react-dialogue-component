@@ -9,7 +9,7 @@
   ],
   "private": false,
   "scripts": {
-    "build": "rm -rf lib && rollup -c && rm -rf lib/assets",
+    "build": "rm -rf lib && npm test && rollup -c && rm -rf lib/assets",
     "test": "jest",
     "test:watch": "jest --watch"
   },
