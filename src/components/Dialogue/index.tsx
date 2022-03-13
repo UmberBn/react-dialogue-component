@@ -54,10 +54,12 @@ const Dialogue: FC<OverlayProps> = ({
             </CloseButton>
           </Header>
           {children && (
-            <Description>
-              <DescriptionText data-testid="react-dialogue-component-description-test-id">
-                {children}
-              </DescriptionText>
+            <Description data-testid="react-dialogue-component-description-test-id">
+              {typeof children === "string" ? (
+                <DescriptionText>{children}</DescriptionText>
+              ) : (
+                children
+              )}
             </Description>
           )}
         </Content>
