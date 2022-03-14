@@ -1,6 +1,6 @@
 # react-dialogue-component
 [![npm version](https://badge.fury.io/js/react-dialogue-component.svg)](https://badge.fury.io/js/react-dialogue-component) 
-![coverage](https://img.shields.io/badge/coverage-100%-success)
+![coverage](https://img.shields.io/badge/coverage-100%25-success)
 ![tests](https://img.shields.io/badge/tests-passing-success)
 
 A simple React component made with styled-components
