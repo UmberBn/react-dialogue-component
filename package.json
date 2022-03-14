@@ -1,10 +1,14 @@
 {
   "name": "react-dialogue-component",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A dialogue component for React apps",
   "repository": "https://github.com/UmberBn/react-dialogue-component",
   "author": "Humberto Bandeira <humberto-bandeira@hotmail.com>",
-  "keywords": ["react", "dialogue", "styled-components"],
+  "keywords": [
+    "react",
+    "dialogue",
+    "styled-components"
+  ],
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
