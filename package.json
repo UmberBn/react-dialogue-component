@@ -1,6 +1,6 @@
 {
   "name": "react-dialogue-component",
-  "version": "0.1.17",
+  "version": "0.2.0",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
