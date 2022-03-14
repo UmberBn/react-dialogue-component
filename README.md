@@ -22,8 +22,8 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 
 ### Example
 ```jsx
-  import { Dialogue } from "react-dialogue-component";
   import { useState } from "react";
+  import { Dialogue } from "react-dialogue-component";
   
   export default function App() {
   const [dialogue, setDialogue] = useState(false);
@@ -73,13 +73,15 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
  ```bash
  cd react-dialogue-component
 ```
-3. install the dependencies using yarn or npm
+3. Install the dependencies using yarn or npm
+
  ```bash
  yarn
  or
  npm install
 ```
-4. run the tests script using yarn or npm.
+4. Run the tests script using yarn or npm.
+
 ```bash
  yarn test
  or
