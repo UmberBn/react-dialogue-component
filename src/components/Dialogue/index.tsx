@@ -1,4 +1,5 @@
 import { useEffect, FC } from "react";
+import Proptypes from "prop-types";
 import OverlayProps from "./types";
 import {
   Container,
@@ -69,6 +70,31 @@ const Dialogue: FC<OverlayProps> = ({
     );
   }
   return null;
+};
+
+Dialogue.propTypes = {
+  /**
+   * If is true onClose is called when user click on dialogue overlay
+   */
+  closeOnOverlayClick: Proptypes.bool.isRequired,
+  /**
+   * Define if dialogue appear on screen
+   */
+  isOpen: Proptypes.bool.isRequired,
+  /**
+   * Triggerd when the user performs some modal closing action
+   */
+  onClose: Proptypes.func.isRequired,
+  /**
+   * The title of the dialogue
+   */
+  title: Proptypes.string,
+};
+
+Dialogue.defaultProps = {
+  closeOnOverlayClick: false,
+  isOpen: false,
+  onClose: () => {},
 };
 
 export default Dialogue;

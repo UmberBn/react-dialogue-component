@@ -4,7 +4,7 @@
 
 A simple React component made with styled-components
 
-<p align="center">![Example gif](./ex-react-dialogue.gif)<p>
+![Example gif](./ex-react-dialogue.gif)
 
 ## Table of Contents
 
@@ -53,8 +53,8 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 
 | Name | Type | Default | Description | Required
 |:-----|:-----|:-----|:-----|:-----|
-| title | string | |The title of the dialogue | :x:
-| children | ReactNode , string | | The description text for the component to render | :x:
+| title | string | | The title of the dialogue | :x:
+| children | ReactNode, string | | The description text for the component to render | :x:
 | isOpen | boolean | false | Define if dialogue appear on screen | :heavy_check_mark:
 | onClose | function | () => void | Triggerd when the user performs some modal closing action<br> the default actions are called when user press Esc button or click in close button "X" | :heavy_check_mark:
 | closeOnOverlayClick | boolean | false | If is true onClose is called when user click on dialogue overlay |  :heavy_check_mark:
@@ -62,7 +62,7 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 
 ### Local Tests
 
-1. Clone the repository.
+1. Clone this repository.
 
  ```bash
   git clone git@github.com:UmberBn/react-dialogue-component.git
