@@ -15,7 +15,9 @@
   "scripts": {
     "build": "rm -rf lib && npm test && rollup -c && rm -rf lib/assets",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "open:coverage": "google-chrome ./coverage/lcov-report/index.html"
   },
   "eslintConfig": {
     "extends": [

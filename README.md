@@ -1,5 +1,6 @@
 # react-dialogue-component
 [![npm version](https://badge.fury.io/js/react-dialogue-component.svg)](https://badge.fury.io/js/react-dialogue-component) 
+![coverage](https://img.shields.io/badge/coverage-100%-success)
 ![tests](https://img.shields.io/badge/tests-passing-success)
 
 A simple React component made with styled-components
@@ -60,7 +61,7 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 | closeOnOverlayClick | boolean | false | If is true onClose is called when user click on dialogue overlay |  :heavy_check_mark:
 
 
-### Local Tests
+### Run Local
 
 1. Clone this repository.
 
@@ -80,10 +81,26 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
  or
  npm install
 ```
-4. Run the tests script using yarn or npm.
 
-```bash
- yarn test
- or
- npm test
- ```
+ ### Scripts
+
+  For execute a script you need to clone this repository and install the project dependencies [See Local section](#local)
+  
+  - Run all tests
+
+  ```bash
+    "npm|yarn" test
+  ```
+  - Generate the coverage of tests
+
+  ```bash
+    "npm|yarn" run test:coverage
+  ```
+
+  - Open the coverage file (run after test:coverage)
+
+   You need google chrome.
+
+  ```bash
+    "npm|yarn" run open:coverage
+  ```
