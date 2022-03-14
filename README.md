@@ -1,4 +1,6 @@
 # react-dialogue-component
+[![npm version](https://badge.fury.io/js/react-dialogue-component.svg)](https://badge.fury.io/js/react-dialogue-component) 
+![tests](https://img.shields.io/badge/tests-passing-success)
 
 A simple React component made with styled-components
 
@@ -45,9 +47,9 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 ```
 [Demo of this example](https://codesandbox.io/s/react-dialogue-demo-jz20gd)
 
-## Props
+## Docs
 
-### Table of Props
+### Props
 
 | Name | Type | Default | Description | Required
 |:-----|:-----|:-----|:-----|:-----|
@@ -58,3 +60,28 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 | closeOnOverlayClick | boolean | false | If is true onClose is called when user click on dialogue overlay |  :heavy_check_mark:
 
 
+### Local Tests
+
+1. Clone the repository.
+
+ ```bash
+  git clone git@github.com:UmberBn/react-dialogue-component.git
+ ```
+
+2. Go to project folder.
+
+ ```bash
+ cd react-dialogue-component
+```
+3. install the dependencies using yarn or npm
+ ```bash
+ yarn
+ or
+ npm install
+```
+4. run the tests script using yarn or npm.
+```bash
+ yarn test
+ or
+ npm test
+ ```
