@@ -1,6 +1,7 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import Dialogue from "./";
+import UserEvent from "@testing-library/user-event"
 import "@testing-library/jest-dom";
 /**
  * @jest-environment jsdom
@@ -69,6 +70,20 @@ describe("Tests the dialogue component behavior when receive differents closeOnO
     expect(DEFAULT_CALLBACK).toHaveBeenCalled();
   });
 });
+describe("Test if the onClose prop is called", () => {
+  it("if click on close button call onClose callback", () => {
+    render(<Dialogue isOpen onClose={DEFAULT_CALLBACK} closeOnOverlayClick />);
+    const closeButtonByTestId = screen.queryByTestId(CLOSE_BUTTON_TESTID);
+    if (closeButtonByTestId) fireEvent.click(closeButtonByTestId);
+    expect(DEFAULT_CALLBACK).toHaveBeenCalled();
+  });
+
+  it("if press esc button call onClose callback", () => {
+    render(<Dialogue isOpen onClose={DEFAULT_CALLBACK} closeOnOverlayClick />);
+    UserEvent.keyboard("{Escape}")
+    expect(DEFAULT_CALLBACK).toHaveBeenCalled();
+  });
+});
 describe("Test the content received by props", () => {
   it("title is not displayed if title prop not exist", () => {
     render(<Dialogue isOpen onClose={DEFAULT_CALLBACK} closeOnOverlayClick />);
@@ -88,12 +103,6 @@ describe("Test the content received by props", () => {
     const titleByTestId = screen.queryByTestId(TITLE_TESTID);
     expect(titleByTestId).toBeInTheDocument();
     expect(titleByTestId).toHaveTextContent(title);
-  });
-  it("if click on close button call onClose callback", () => {
-    render(<Dialogue isOpen onClose={DEFAULT_CALLBACK} closeOnOverlayClick />);
-    const closeButtonByTestId = screen.queryByTestId(CLOSE_BUTTON_TESTID);
-    if (closeButtonByTestId) fireEvent.click(closeButtonByTestId);
-    expect(DEFAULT_CALLBACK).toHaveBeenCalled();
   });
   it("description is not displayed if children prop not exist", () => {
     render(<Dialogue isOpen onClose={DEFAULT_CALLBACK} closeOnOverlayClick />);
